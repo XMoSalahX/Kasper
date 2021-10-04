@@ -1,0 +1,85 @@
+nav ul li:hover {
+    color: #00C7FC;
+    border-bottom: 1px solid #00C7FC;
+}
+
+nav ul li:first-child a {
+    color: #00C7FC;
+    padding-block: calc(40px - 9px);
+    border-bottom: 1px solid #00C7FC;
+}
+
+header .which-one div:nth-child(2) {
+    background-color: #00C7FC;
+}
+
+.porto .firstpart .content .box:hover img {
+    transform: rotate(2deg) scale(1.2);
+    -webkit-transform: rotate(2deg) scale(1.2);
+    -moz-transform: rotate(2deg) scale(1.2);
+    -ms-transform: rotate(2deg) scale(1.2);
+    -o-transform: rotate(2deg) scale(1.2);
+}
+
+.porto .firstpart .content .box:hover div {
+    bottom: 0;
+}
+
+.fa-search:hover {
+    color: var(--main-color);
+}
+
+.change-background:hover {
+    color: var(--main-color);
+}
+
+.which-one div:hover {
+    background-color: var(--main-color);
+}
+
+.porto .firstpart .porto-list li:hover {
+    background-color: var(--main-color);
+    color: white;
+}
+
+.porto .firstpart>a:last-child:hover {
+    color: black;
+    background-color: transparent;
+    border: 1px solid black;
+}
+
+.porto .second-part .content .see-more:hover {
+    color: black;
+    background-color: transparent;
+    border: 1px solid black;
+}
+
+.about .second-part .TESTIMONIALS ul li:hover {
+    background-color: #00C7FC;
+}
+
+.PRICING .firstpart .content .box .end button:hover {
+    color: white;
+    background-color: black;
+}
+
+.special-request button:hover {
+    background-color: transparent;
+    color: black;
+    border: 1px solid black;
+}
+
+.PRICING .second-part .sub form:hover input:last-child {
+    background-color: white;
+    color: black;
+}
+
+.CONTACT-US .firstpart .content form input:last-child:hover {
+    color: black;
+    background-color: transparent;
+    border: 1px solid black;
+}
+
+footer .social-icon i:hover {
+    color: #00C7FC;
+}
