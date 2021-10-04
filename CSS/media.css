@@ -205,7 +205,13 @@
         @media (max-width: 540px) {
             .CONTACT-US .firstpart .content .get-in-touch {
                 flex-direction: column;
-                gap: 20px;
+                gap: 0;
+            }
+            .CONTACT-US .firstpart .content .get-in-touch ul {
+                margin-bottom: 65px;
+            }
+            footer {
+                margin-top: 0;
             }
             footer>div {
                 top: 60%;
