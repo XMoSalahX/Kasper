@@ -74,7 +74,7 @@ header .which-one div:nth-child(2) {
     color: black;
 }
 
-.CONTACT-US .firstpart .content form input:last-child:hover {
+.CONTACT-US .firstpart .content form button:hover {
     color: black;
     background-color: transparent;
     border: 1px solid black;
