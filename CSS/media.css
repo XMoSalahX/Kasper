@@ -178,6 +178,10 @@
                 flex-direction: column;
                 gap: 50px;
                 align-items: center;
+                max-width: 100%;
+            }
+            .CONTACT-US .firstpart .content form button:last-child {
+                align-self: start;
             }
             .CONTACT-US .firstpart .content form {
                 width: 90%;
@@ -208,7 +212,7 @@
                 gap: 0;
             }
             .CONTACT-US .firstpart .content .get-in-touch ul {
-                margin-bottom: 65px;
+                margin-bottom: 0;
             }
             footer {
                 margin-top: 0;
