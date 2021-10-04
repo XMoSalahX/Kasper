@@ -69,7 +69,7 @@ header .which-one div:nth-child(2) {
     border: 1px solid black;
 }
 
-.PRICING .second-part .sub form:hover input:last-child {
+.PRICING .second-part .sub form:hover button {
     background-color: white;
     color: black;
 }
