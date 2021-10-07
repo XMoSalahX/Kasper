@@ -283,14 +283,20 @@ main {
     flex: 1;
 }
 
-.services .second-part .background {
-    height: 600px;
-    background-image: url(http://127.0.0.1:5500/Images/design-features.webp);
-    background-repeat: no-repeat;
-    background-size: cover;
+.services .second-part {
     margin-top: 120px;
+    overflow: hidden;
+}
+
+.services .second-part .background {
+    max-height: 600px;
+    overflow: hidden;
+}
+
+.services .second-part .background img {
     filter: brightness(.5);
     -webkit-filter: brightness(.5);
+    width: 100%;
 }
 
 .services .second-part {
