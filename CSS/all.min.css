@@ -1,6 +1,7 @@
-/*! CSS Used from: http://127.0.0.1:5500/CSS/all.min.css?_cacheOverride=1633389223682 */
-
+.fa,
 .fab,
+.fad,
+.fal,
 .far,
 .fas {
     -moz-osx-font-smoothing: grayscale;
@@ -9,128 +10,130 @@
     font-style: normal;
     font-variant: normal;
     text-rendering: auto;
-    line-height: 1;
+    line-height: 1
 }
 
 .fa-lg {
     font-size: 1.33333em;
     line-height: .75em;
-    vertical-align: -.0667em;
+    vertical-align: -.0667em
 }
 
 .fa-2x {
-    font-size: 2em;
+    font-size: 2em
 }
 
 .fa-3x {
-    font-size: 3em;
+    font-size: 3em
 }
 
 .fa-angle-left:before {
-    content: "\f104";
+    content: "\f104"
 }
 
 .fa-angle-right:before {
-    content: "\f105";
+    content: "\f105"
 }
 
 .fa-bars:before {
-    content: "\f0c9";
+    content: "\f0c9"
 }
 
 .fa-camera:before {
-    content: "\f030";
+    content: "\f030"
 }
 
 .fa-cog:before {
-    content: "\f013";
+    content: "\f013"
 }
 
 .fa-desktop:before {
-    content: "\f108";
+    content: "\f108"
 }
 
 .fa-envelope:before {
-    content: "\f0e0";
+    content: "\f0e0"
 }
 
 .fa-facebook-f:before {
-    content: "\f39e";
+    content: "\f39e"
 }
 
 .fa-folder:before {
-    content: "\f07b";
+    content: "\f07b"
 }
 
 .fa-home:before {
-    content: "\f015";
+    content: "\f015"
 }
 
 .fa-linkedin:before {
-    content: "\f08c";
+    content: "\f08c"
 }
 
 .fa-mug-hot:before {
-    content: "\f7b6";
+    content: "\f7b6"
 }
 
 .fa-pencil-ruler:before {
-    content: "\f5ae";
+    content: "\f5ae"
 }
 
 .fa-search:before {
-    content: "\f002";
+    content: "\f002"
 }
 
 .fa-trophy:before {
-    content: "\f091";
+    content: "\f091"
 }
 
 .fa-twitter:before {
-    content: "\f099";
+    content: "\f099"
+}
+
+@font-face {
+    font-family: "Font Awesome 5 Brands";
+    font-style: normal;
+    font-weight: 400;
+    font-display: block;
+    src: url(../webfonts/fa-brands-400.eot);
+    src: url(../webfonts/fa-brands-400.eot?#iefix) format("embedded-opentype"), url(../webfonts/fa-brands-400.woff2) format("woff2"), url(../webfonts/fa-brands-400.woff) format("woff"), url(../webfonts/fa-brands-400.ttf) format("truetype"), url(../webfonts/fa-brands-400.svg#fontawesome) format("svg")
 }
 
 .fab {
-    font-family: "Font Awesome 5 Brands";
+    font-family: "Font Awesome 5 Brands"
+}
+
+@font-face {
+    font-family: "Font Awesome 5 Free";
+    font-style: normal;
+    font-weight: 400;
+    font-display: block;
+    src: url(../webfonts/fa-regular-400.eot);
+    src: url(../webfonts/fa-regular-400.eot?#iefix) format("embedded-opentype"), url(../webfonts/fa-regular-400.woff2) format("woff2"), url(../webfonts/fa-regular-400.woff) format("woff"), url(../webfonts/fa-regular-400.ttf) format("truetype"), url(../webfonts/fa-regular-400.svg#fontawesome) format("svg")
 }
 
 .fab,
 .far {
-    font-weight: 400;
+    font-weight: 400
 }
 
+@font-face {
+    font-family: "Font Awesome 5 Free";
+    font-style: normal;
+    font-weight: 900;
+    font-display: block;
+    src: url(../webfonts/fa-solid-900.eot);
+    src: url(../webfonts/fa-solid-900.eot?#iefix) format("embedded-opentype"), url(../webfonts/fa-solid-900.woff2) format("woff2"), url(../webfonts/fa-solid-900.woff) format("woff"), url(../webfonts/fa-solid-900.ttf) format("truetype"), url(../webfonts/fa-solid-900.svg#fontawesome) format("svg")
+}
+
+.fa,
 .far,
 .fas {
-    font-family: "Font Awesome 5 Free";
+    font-family: "Font Awesome 5 Free"
 }
 
+.fa,
 .fas {
-    font-weight: 900;
-}
-
-@font-face {
-    font-family: "Font Awesome 5 Free";
-    font-style: normal;
-    font-weight: 400;
-    font-display: block;
-    src: url(http://127.0.0.1:5500/webfonts/fa-regular-400.eot);
-    src: url(http://127.0.0.1:5500/webfonts/fa-regular-400.eot#iefix) format("embedded-opentype"), url(http://127.0.0.1:5500/webfonts/fa-regular-400.woff2) format("woff2"), url(http://127.0.0.1:5500/webfonts/fa-regular-400.woff) format("woff"), url(http://127.0.0.1:5500/webfonts/fa-regular-400.ttf) format("truetype"), url(http://127.0.0.1:5500/webfonts/fa-regular-400.svg#fontawesome) format("svg");
-}
-
-@font-face {
-    font-family: "Font Awesome 5 Free";
-    font-style: normal;
-    font-weight: 900;
-    font-display: block;
-    src: url(http://127.0.0.1:5500/webfonts/fa-solid-900.eot);
-    src: url(http://127.0.0.1:5500/webfonts/fa-solid-900.eot#iefix) format("embedded-opentype"), url(http://127.0.0.1:5500/webfonts/fa-solid-900.woff2) format("woff2"), url(http://127.0.0.1:5500/webfonts/fa-solid-900.woff) format("woff"), url(http://127.0.0.1:5500/webfonts/fa-solid-900.ttf) format("truetype"), url(http://127.0.0.1:5500/webfonts/fa-solid-900.svg#fontawesome) format("svg");
-}
-
-@font-face {
-    font-family: "Font Awesome 5 Brands";
-    font-style: normal;
-    font-weight: 400;
-    font-display: block;
-    src: url(http://127.0.0.1:5500/webfonts/fa-brands-400.eot);
-    src: url(http://127.0.0.1:5500/webfonts/fa-brands-400.eot#iefix) format("embedded-opentype"), url(http://127.0.0.1:5500/webfonts/fa-brands-400.woff2) format("woff2"), url(http://127.0.0.1:5500/webfonts/fa-brands-400.woff) format("woff"), url(http://127.0.0.1:5500/webfonts/fa-brands-400.ttf) format("truetype"), url(http://127.0.0.1:5500/webfonts/fa-brands-400.svg#fontawesome) format("svg");
+    font-weight: 900
 }
