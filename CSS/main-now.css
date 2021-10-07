@@ -35,11 +35,12 @@ body {
 }
 
 .container {
-    min-height: 100vh;
+    overflow: hidden;
+}
+
+.container img {
     width: 100%;
-    background-image: url(http://127.0.0.1:5500/Images/landing.webp);
-    background-size: cover;
-    background-repeat: no-repeat;
+    max-height: 100vh;
     filter: brightness(.5);
     -webkit-filter: brightness(.5);
 }
