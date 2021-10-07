@@ -229,6 +229,9 @@
     .CONTACT-US .firstpart .content .get-in-touch ul:first-child {
         margin-bottom: 50px;
     }
+    .services .second-part .background img {
+        width: auto;
+    }
 }
 
 @media (height:1024px) {
