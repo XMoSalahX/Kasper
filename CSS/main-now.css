@@ -40,8 +40,8 @@ body {
 }
 
 .container img {
-    width: 100%;
-    max-height: 100%;
+    width: -webkit-fill-available;
+    max-height: 100vh;
     filter: brightness(.5);
     -webkit-filter: brightness(.5);
 }
@@ -62,7 +62,7 @@ nav .logo {
 }
 
 nav img {
-    width: 50%;
+    width: 150px;
 }
 
 nav ul {
