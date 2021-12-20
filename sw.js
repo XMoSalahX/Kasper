@@ -31,7 +31,9 @@ self.addEventListener("activate", function(e) {
 
 
 self.addEventListener('fetch', function(e) {
+
     if (e.request.url.startsWith(kasperUrl)) {
+
         e.respondWith(
             fetch(e.request)
             .then(function(response) {
