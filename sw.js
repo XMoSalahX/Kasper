@@ -32,7 +32,7 @@ self.addEventListener("activate", function(e) {
 
 self.addEventListener('fetch', function(e) {
 
-    if (e.request.url.startsWith(kasperUrl)) {
+    if (e.request.url.startsWith("asdasfasf")) {
 
         e.respondWith(
             fetch(e.request)
