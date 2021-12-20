@@ -1,7 +1,7 @@
 var cacheName = "kasperWPA"
 var DataCacheName = "kasper-WPA-Data"
 var filesToCache = []
-var kasperUrl = "http://127.0.0.1:5500/index.html"
+var kasperUrl = "https://xmosalahx.github.io/Kasper/"
 
 self.addEventListener("install", function(e) {
     console.log('[ServiceWorker] Install');
