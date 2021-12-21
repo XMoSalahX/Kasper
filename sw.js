@@ -1,7 +1,7 @@
 var cacheName = "kasperWPA"
 var DataCacheName = "kasper-WPA-Data"
 var filesToCache = [
-
+    '/',
     'index.html',
     'CSS/main.css',
     'js/app.js',
@@ -74,19 +74,12 @@ self.addEventListener("activate", function(e) {
 
 
 self.addEventListener('fetch', function(e) {
-
-
-    e.respondWith(
+    e.waitUntil(
         caches.match(e.request).then(function(response) {
             if (response) {
-                console.log('[ServiceWorker] from Cache Only', e.request.url);
+                console.log("[Service Worker Found in Cache]", e.request.url)
                 return response
             }
-            console.log('[ServiceWorker] from Network Only', e.request.url);
-            return fetch(e.request);
-
-
         })
-    );
-
+    )
 });
