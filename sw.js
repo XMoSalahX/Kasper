@@ -100,7 +100,7 @@ self.addEventListener('fetch', function(e) {
             caches.match(e.request).then(function(response) {
                 console.log('[ServiceWorker] Fetch Only', e.request.url);
 
-                return response || fetch(e.request);
+                return response
             })
         );
     }
