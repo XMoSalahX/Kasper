@@ -73,13 +73,47 @@ self.addEventListener("activate", function(e) {
 })
 
 
+// self.addEventListener('fetch', function(e) {
+//     e.waitUntil(
+//         caches.match(e.request).then(function(response) {
+//             if (response) {
+//                 console.log("[Service Worker Found in Cache]", e.request.url)
+//                 return response
+//             }
+//         })
+//     )
+// });
+
+
+
 self.addEventListener('fetch', function(e) {
-    e.waitUntil(
+
+
+    e.respondWith(
         caches.match(e.request).then(function(response) {
             if (response) {
-                console.log("[Service Worker Found in Cache]", e.request.url)
+
+
+                console.log('[ServiceWorker] Fetch Only', e.request.url);
+
                 return response
             }
+            return fetch(e.request)
+                //     
+                //         .then(function(response) {
+
+            //             return caches.open(cacheName).then(function(cache) {
+
+            //                 cache.put(e.request.url, response.clone());
+
+            //                 console.log('[ServiceWorker] Fetched & Cached', e.request.url);
+            //                 return response;
+            //             });
+            //         })
         })
-    )
+    );
+
+
+
+
 });
