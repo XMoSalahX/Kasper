@@ -73,47 +73,35 @@ self.addEventListener("activate", function(e) {
 })
 
 
-// self.addEventListener('fetch', function(e) {
-//     e.waitUntil(
-//         caches.match(e.request).then(function(response) {
-//             if (response) {
-//                 console.log("[Service Worker Found in Cache]", e.request.url)
-//                 return response
-//             }
-//         })
-//     )
-// });
 
 
+var control = 0
 
 self.addEventListener('fetch', function(e) {
 
+    if (control === 0) {
 
-    e.respondWith(
-        caches.match(e.request).then(function(response) {
-            if (response) {
+        e.respondWith(
+            fetch(e.request)
+            .then(function(response) {
 
+                return caches.open(cacheName).then(function(cache) {
 
+                    cache.put(e.request.url, response.clone());
+
+                    console.log('[ServiceWorker] Fetched & Cached', e.request.url);
+                    control = 1
+                    return response;
+                });
+            })
+        );
+    } else {
+        e.respondWith(
+            caches.match(e.request).then(function(response) {
                 console.log('[ServiceWorker] Fetch Only', e.request.url);
 
-                return response
-            }
-            return e.request
-                //     
-                //         .then(function(response) {
-
-            //             return caches.open(cacheName).then(function(cache) {
-
-            //                 cache.put(e.request.url, response.clone());
-
-            //                 console.log('[ServiceWorker] Fetched & Cached', e.request.url);
-            //                 return response;
-            //             });
-            //         })
-        })
-    );
-
-
-
-
+                return response || fetch(e.request);
+            })
+        );
+    }
 });
