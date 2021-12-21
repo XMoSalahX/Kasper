@@ -1,7 +1,7 @@
 var cacheName = "kasperWPA"
 var DataCacheName = "kasper-WPA-Data"
 var filesToCache = [
-    '/',
+
     'index.html',
     'CSS/main.css',
     'js/app.js',
@@ -45,7 +45,7 @@ var filesToCache = [
     "webfonts/fa-solid-900.woff",
     "webfonts/fa-solid-900.woff2",
 ]
-var kasperUrl = "http://127.0.0.1:5500/"
+
 
 self.addEventListener("install", function(e) {
     console.log('[ServiceWorker] Install');
