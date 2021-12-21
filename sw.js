@@ -98,7 +98,7 @@ self.addEventListener('fetch', function(e) {
 
                 return response
             }
-            return fetch(e.request)
+            return e.request
                 //     
                 //         .then(function(response) {
 
