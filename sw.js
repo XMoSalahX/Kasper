@@ -74,34 +74,89 @@ self.addEventListener("activate", function(e) {
 
 
 
+// var url = "http://127.0.0.1:5500/"
 
-var control = 0
+// self.addEventListener('fetch', function(e) {
 
-self.addEventListener('fetch', function(e) {
+//     if (e.request.url.startsWith(url)) {
 
-    if (control === 0) {
+//         e.respondWith(
+//             fetch(e.request)
+//             .then(function(response) {
 
-        e.respondWith(
-            fetch(e.request)
-            .then(function(response) {
+//                 return caches.open(cacheName).then(function(cache) {
 
-                return caches.open(cacheName).then(function(cache) {
+//                     cache.put(e.request.url, response.clone());
 
-                    cache.put(e.request.url, response.clone());
+//                     console.log('[ServiceWorker] Fetched & Cached', e.request.url);
+//                     control = 1
+//                     return response;
+//                 });
+//             })
+//         );
+//     } else {
+//         e.respondWith(
+//             caches.match(e.request).then(function(response) {
+//                 console.log('[ServiceWorker] Fetch Only', e.request.url);
 
-                    console.log('[ServiceWorker] Fetched & Cached', e.request.url);
-                    control = 1
-                    return response;
-                });
-            })
-        );
-    } else {
-        e.respondWith(
-            caches.match(e.request).then(function(response) {
-                console.log('[ServiceWorker] Fetch Only', e.request.url);
+//                 return response
+//             })
+//         );
+//     }
+// });
 
-                return response
-            })
-        );
-    }
+
+
+
+// var control = 0
+// var url = "http://127.0.0.1:5500/index.html"
+// self.addEventListener('fetch', function(e) {
+
+//     if (e.request.url.startsWith(url)) {
+
+//         e.respondWith(
+//             caches.match(e.request).then(function(response) {
+//                 console.log('[ServiceWorker] Fetch Only', e.request.url);
+
+//                 return response
+//             })
+//         );
+
+
+//     } else {
+//         e.respondWith(
+//             fetch(e.request)
+//             .then(function(response) {
+
+//                 return caches.open(cacheName).then(function(cache) {
+
+//                     cache.put(e.request.url, response.clone());
+
+//                     console.log('[ServiceWorker] Fetched & Cached', e.request.url);
+
+//                     return response;
+//                 });
+//             })
+//         );
+//     }
+// });
+
+
+self.addEventListener('fetch', (e) => {
+    e.respondWith((async() => {
+        const r = await caches.match(e.request);
+        console.log(`[Service Worker] Fetching resource: ${e.request.url}`);
+        if (r) {
+            console.log("R we Found")
+            return r;
+        }
+
+        const response = await fetch(e.request);
+        const cache = await caches.open(cacheName);
+        console.log(`[Service Worker] Caching new resource: ${e.request.url}`);
+        cache.put(e.request, response.clone());
+        return response;
+
+
+    })());
 });
