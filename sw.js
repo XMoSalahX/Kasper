@@ -1,5 +1,4 @@
 var cacheName = "kasperWPA"
-var DataCacheName = "kasper-WPA-Data"
 var filesToCache = [
 
     'index.html',
